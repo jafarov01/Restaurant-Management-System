@@ -11,7 +11,6 @@ public enum Category {
             case APPETIZER -> "Appetizer";
             case MAIN_COURSE -> "Main Course";
             case DESSERT -> "Dessert";
-            default -> throw new IllegalArgumentException();
         };
     }
 }

@@ -2,7 +2,6 @@ package models;
 
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class Reservation {
     private static int idGenerator = 0;

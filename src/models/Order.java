@@ -19,9 +19,7 @@ public class Order {
     @Override
     public String toString() {
         StringBuilder itemsString = new StringBuilder();
-        items.forEach((menuItem, quantity) -> {
-            itemsString.append(String.format("\n\t\t%s (Quantity: %d)", menuItem, quantity));
-        });
+        items.forEach((menuItem, quantity) -> itemsString.append(String.format("\n\t\t%s (Quantity: %d)", menuItem, quantity)));
 
         return """
             Order:
