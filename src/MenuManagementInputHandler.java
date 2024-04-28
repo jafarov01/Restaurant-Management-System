@@ -1,5 +1,7 @@
+import models.Category;
+import models.MenuItem;
+
 import java.util.Scanner;
-import models.*;
 
 public class MenuManagementInputHandler {
 
@@ -18,19 +20,19 @@ public class MenuManagementInputHandler {
             int choice = promptMenuManagementMenu();
 
             switch (choice) {
-                case 1: // Add Menu Item
+                case 1:
                     addMenuItem();
                     break;
-                case 2: // Update Menu Item
+                case 2:
                     updateMenuItem();
                     break;
-                case 3: // Delete Menu Item
+                case 3:
                     deleteMenuItem();
                     break;
-                case 4: // Display Menu Items
+                case 4:
                     restaurant.displayMenuItems();
                     break;
-                case 5: // Back to Main Menu
+                case 5:
                     isRunning = false;
                     break;
                 default:
@@ -53,7 +55,6 @@ public class MenuManagementInputHandler {
 
         restaurant.addMenuItem(newItem);
 
-        // Display success message
         System.out.println("Menu item added successfully!");
     }
 
@@ -61,7 +62,6 @@ public class MenuManagementInputHandler {
         System.out.println("Enter the ID of the menu item to update: ");
         int itemId = Integer.parseInt(scanner.nextLine());
 
-        // Find the menu item in the list based on the identifier
         MenuItem menuItemToUpdate = null;
         for (MenuItem menuItem : restaurant.getMenuItems()) {
             if (menuItem.getId() == itemId) {
@@ -84,7 +84,6 @@ public class MenuManagementInputHandler {
 
             System.out.println("Menu item updated successfully!");
         } else {
-            // Display failure message if menu item is not found
             System.out.println("Menu item with ID " + itemId + " not found.");
         }
     }

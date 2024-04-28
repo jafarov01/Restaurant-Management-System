@@ -1,4 +1,7 @@
-import models.*;
+import models.MenuItem;
+import models.Order;
+import models.Reservation;
+
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -92,7 +95,6 @@ public class Restaurant {
     }
 
     // Getters
-
     public ArrayList<Order> getFinalizedOrders() {
         return finalizedOrders;
     }
